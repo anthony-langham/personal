@@ -1,0 +1,181 @@
+---
+// Interactive eyes component that follows cursor movement
+---
+
+<div class="eyes-container">
+  <div class="eye left-eye">
+    <div class="pupil"></div>
+  </div>
+  <div class="eye right-eye">
+    <div class="pupil"></div>
+  </div>
+</div>
+
+<style>
+  .eyes-container {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    height: 40px;
+    padding: 0 4px;
+  }
+
+  .eye {
+    width: 32px;
+    height: 32px;
+    background-color: #e5e5e5;
+    border-radius: 50%;
+    border: 1px solid #171717;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: height 0.15s ease-in-out;
+  }
+
+  /* Dark mode adjustments */
+  :global(.dark) .eye {
+    background-color: #d4d4d4;
+    border-color: transparent;
+  }
+
+  /* Blinking animation */
+  .eye.blinking {
+    height: 3px;
+  }
+
+  .pupil {
+    width: 14px;
+    height: 14px;
+    background-color: #171717;
+    border-radius: 50%;
+    position: absolute;
+    transition: none;
+    transform: translate(0, 0);
+  }
+
+  /* Hide pupil during blink */
+  .eye.blinking .pupil {
+    opacity: 0;
+  }
+
+  /* Dark mode pupil */
+  :global(.dark) .pupil {
+    background-color: #0a0a0a;
+  }
+</style>
+
+<script>
+  function initInteractiveEyes() {
+    const leftEye = document.querySelector('.left-eye');
+    const rightEye = document.querySelector('.right-eye');
+    const leftPupil = leftEye?.querySelector('.pupil') as HTMLElement;
+    const rightPupil = rightEye?.querySelector('.pupil') as HTMLElement;
+    
+    if (!leftEye || !rightEye || !leftPupil || !rightPupil) return;
+
+    let animationFrame: number;
+    let blinkInterval: number;
+
+    // Blink function
+    function blink() {
+      leftEye.classList.add('blinking');
+      rightEye.classList.add('blinking');
+      
+      setTimeout(() => {
+        leftEye.classList.remove('blinking');
+        rightEye.classList.remove('blinking');
+      }, 150);
+    }
+
+    // Start blinking every 5 seconds
+    blinkInterval = setInterval(blink, 8000);
+    
+    // Also blink on page load after a short delay
+    setTimeout(blink, 1000);
+
+    function moveEye(eye: Element, pupil: HTMLElement, mouseX: number, mouseY: number) {
+      const eyeRect = eye.getBoundingClientRect();
+      const eyeCenterX = eyeRect.left + eyeRect.width / 2;
+      const eyeCenterY = eyeRect.top + eyeRect.height / 2;
+      
+      // Calculate angle from eye center to mouse
+      const deltaX = mouseX - eyeCenterX;
+      const deltaY = mouseY - eyeCenterY;
+      const angle = Math.atan2(deltaY, deltaX);
+      const distance = Math.min(Math.sqrt(deltaX * deltaX + deltaY * deltaY), 200);
+      
+      // Maximum distance pupil can move from center (keeping it within the eye)
+      const maxPupilDistance = 7;
+      const pupilDistance = Math.min((distance / 200) * maxPupilDistance, maxPupilDistance);
+      
+      // Calculate pupil position
+      const pupilX = Math.cos(angle) * pupilDistance;
+      const pupilY = Math.sin(angle) * pupilDistance;
+      
+      // Apply transform
+      pupil.style.transform = `translate(${pupilX}px, ${pupilY}px)`;
+    }
+
+    function handleMouseMove(e: MouseEvent) {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+
+      animationFrame = requestAnimationFrame(() => {
+        moveEye(leftEye, leftPupil, e.clientX, e.clientY);
+        moveEye(rightEye, rightPupil, e.clientX, e.clientY);
+      });
+    }
+
+    function handleMouseLeave() {
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+      
+      // Reset pupils to center with smooth transition
+      leftPupil.style.transition = 'transform 0.3s ease-out';
+      rightPupil.style.transition = 'transform 0.3s ease-out';
+      leftPupil.style.transform = 'translate(0, 0)';
+      rightPupil.style.transform = 'translate(0, 0)';
+      
+      // Remove transition after animation
+      setTimeout(() => {
+        leftPupil.style.transition = 'none';
+        rightPupil.style.transition = 'none';
+      }, 300);
+    }
+
+    // Add event listeners
+    document.addEventListener('mousemove', handleMouseMove);
+    document.addEventListener('mouseleave', handleMouseLeave);
+
+    // Touch support for mobile
+    document.addEventListener('touchmove', (e) => {
+      const touch = e.touches[0];
+      handleMouseMove({
+        clientX: touch.clientX,
+        clientY: touch.clientY
+      } as MouseEvent);
+    });
+
+    // Cleanup function for view transitions
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener('mouseleave', handleMouseLeave);
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
+      }
+      if (blinkInterval) {
+        clearInterval(blinkInterval);
+      }
+    };
+  }
+
+  // Initialize on page load
+  document.addEventListener('DOMContentLoaded', initInteractiveEyes);
+  
+  // Reinitialize after view transitions
+  document.addEventListener('astro:after-swap', initInteractiveEyes);
+</script>
