@@ -86,7 +86,8 @@
       }
 
       animationFrame = requestAnimationFrame(() => {
-        const rect = orb.getBoundingClientRect();
+        const rect = orb?.getBoundingClientRect();
+        if (!rect) return;
         const orbCenterX = rect.left + rect.width / 2;
         const orbCenterY = rect.top + rect.height / 2;
         
@@ -111,6 +112,7 @@
         
         // Subtle gradient shift based on cursor position
         const angle = Math.atan2(deltaY, deltaX) * (180 / Math.PI);
+        if (!orb) return;
         orb.style.background = `radial-gradient(
           circle at ${30 + moveX}% ${30 + moveY}%,
           rgba(99, 102, 241, 0.8),
@@ -130,6 +132,7 @@
         orbInner.style.transform = 'translate(0, 0)';
       }
       
+      if (!orb) return;
       // Reset gradient
       orb.style.background = '';
     }

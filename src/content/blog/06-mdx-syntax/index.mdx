@@ -1,69 +1,24 @@
 ---
-title: "MDX syntax guide"
+title: "Realtime Clinical Dashboards"
 description: "Get started writing mdx in markdown."
-date: "Mar 16 2024"
+date: "Mar 16 2023"
 ---
 
-MDX is largely an extension of markdown with the ability to import `.astro`,
-`.jsx`, `.tsx` and other framework components you have integrated.
-
-This unlocks a lot of possibilities for creating interactive content.
-
-This guide will cover the basics of mdx syntax and how to use it, as well as a few examples.
-
----
-
-### Example 1
-
-Importing a component from the `/components` directory. 
-
-This component will accept a javascript date object and format it as a string.
-
-```astro
-import DateComp from "../../../components/FormattedDate.astro";
-
-<DateComp date={new Date()} />
-```
-
-import FormattedDate from "../../../components/FormattedDate.astro";
-
-<FormattedDate date={new Date()} />
-
----
-
-### Example 2
-
-Importing a component from a relative path to your content.
-
-This component will display an alert when you click the button.
-
-```astro
-import RelativeComponent from "./component.astro";
-
-<RelativeComponent />
-```
-
-import RelativeComponent from "./component.astro";
-
-<RelativeComponent />
-
----
-
-Nano is an extremely lightweight theme, with no frameworks, so there aren't
-any examples of react, vue, solid etc. You can integrate these frameworks using
-the guide below, and also use those components in your mdx files. 
-
-Don't forget to 
-use the `client` directive to make them interactive.
-
-```astro
-<ReactComponent client:load />
-```
-
----
-
-### More Links
-- [MDX Syntax Documentation](https://mdxjs.com/docs/what-is-mdx)
-- [Astro Framework Integrations](https://docs.astro.build/en/guides/integrations-guide)
-- [Astro Usage Documentation](https://docs.astro.build/en/guides/markdown-content/#markdown-and-mdx-pages)
-- **Note:** [Client Directives](https://docs.astro.build/en/reference/directives-reference/#client-directives) are still required to create interactive components. Otherwise, all components in your MDX will render as static HTML (no JavaScript) by default.
+Introduction
+Ensuring and maintaining high-quality standards is paramount to delivering exceptional patient care in the healthcare industry. Traditionally, clinical audits have been the primary tool for assessing and improving quality in healthcare organizations. However, in the dynamic landscape of 2023, the limitations of clinical audits are becoming increasingly evident. This blog post explores why clinical audits alone are insufficient and why organizations should embrace real-time monitoring to track quality standards. While audits play a crucial role, real-time monitoring with Quality Key Performance Indicators (KPIs) has emerged as the gold standard for quality management.
+The Limitations of Clinical Audits
+Clinical audits are retrospective assessments that involve the systematic review of patient records and processes to identify areas of improvement. While audits offer valuable insights into past performance, they have inherent limitations that make them less effective in today's fast-paced healthcare environment.
+Time Lag: Clinical audits involve a significant time delay between data collection and analysis. This delay hampers the ability to identify and rectify issues promptly, leading to potential harm to patients and missed improvement opportunities.
+Limited Scope: Audits typically focus on a specific aspect of care or a particular timeframe. This limited scope can overlook systemic issues and fail to capture real-time variations in quality.
+Incomplete Picture: Audits provide a snapshot of quality at a given moment but do not capture the ongoing performance and trends over time. Continuous monitoring makes it easier to assess the effectiveness of improvement initiatives.
+The Power of Real-Time Monitoring
+On the other hand, real-time monitoring offers a proactive and comprehensive approach to quality management. By leveraging technology and digital solutions, healthcare organizations can track Quality KPIs in real-time, providing up-to-date and actionable insights into their performance. Here are the key reasons why real-time monitoring is the gold standard for quality management in 2023:
+Timeliness and Proactivity: Real-time monitoring allows organizations to identify quality issues as they arise, enabling immediate corrective actions. By proactively monitoring Quality KPIs, healthcare providers can intervene promptly to prevent adverse events and ensure continuous improvement.
+Comprehensive Data: Real-time monitoring provides a holistic view of quality across the organization, integrating data from various sources and systems. This comprehensive data enables a deeper understanding of trends, patterns, and root causes, facilitating targeted interventions for quality enhancement.
+Continuous Improvement: Real-time monitoring supports a continuous improvement culture by providing instant performance feedback. Teams can monitor Quality KPIs, identify areas of underperformance, and implement iterative changes to enhance care delivery promptly.
+Enhanced Patient Safety: Real-time monitoring reduces the risk of patient harm by enabling the early detection of adverse events or deviations from quality standards. By actively tracking Quality KPIs, organizations can implement timely interventions and ensure patient safety is prioritized.
+Efficiency and Resource Optimization: Real-time monitoring optimizes resource allocation by promptly identifying inefficiencies and variations in care delivery. This data-driven approach allows organizations to allocate resources effectively, reduce waste, and improve operational efficiency.
+The Role of Clinical Audits
+While real-time monitoring takes the lead in quality management, clinical audits still have an essential role. Audits provide a retrospective assessment, validating the effectiveness of improvement initiatives and serving as a valuable tool for external accreditation and compliance. They comprehensively evaluate care processes and patient outcomes, identifying areas for long-term systemic change.
+Conclusion
+Healthcare organizations must embrace the power of real-time monitoring to go beyond clinical audits and elevate their quality standards. While audits remain significant, real-time monitoring with Quality KPIs is the gold standard for quality management.

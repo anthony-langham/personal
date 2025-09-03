@@ -76,14 +76,16 @@
     if (!leftEye || !rightEye || !leftPupil || !rightPupil) return;
 
     let animationFrame: number;
-    let blinkInterval: number;
+    let blinkInterval: any;
 
     // Blink function
     function blink() {
+      if (!leftEye || !rightEye) return;
       leftEye.classList.add('blinking');
       rightEye.classList.add('blinking');
       
       setTimeout(() => {
+        if (!leftEye || !rightEye) return;
         leftEye.classList.remove('blinking');
         rightEye.classList.remove('blinking');
       }, 150);
@@ -124,6 +126,7 @@
       }
 
       animationFrame = requestAnimationFrame(() => {
+        if (!leftEye || !rightEye) return;
         moveEye(leftEye, leftPupil, e.clientX, e.clientY);
         moveEye(rightEye, rightPupil, e.clientX, e.clientY);
       });

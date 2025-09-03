@@ -1,73 +1,53 @@
 ---
-title: "Getting started"
-description: "Hit the ground running."
-date: "Mar 22 2024"
+title: "Entropy"
+description: "Reversing disorder locally"
+date: "09/04/2025"
+draft: false
 ---
 
-The basic configuration of Nano is pretty simple.
+## My Philosophy
 
-Edit `src/consts.ts`
+I see my work as a doctor and engineer as a form of **entropy reversal** — taking chaotic, ambiguous, or disordered systems and bringing structure, clarity, and direction.
 
-Customize the base site
+Whether I’m shaping clinical workflows, designing product logic, or building tools, the drive is the same: **convert noise into signal**.
 
-```ts 
-// src/consts.ts
+## How I Reverse Entropy
 
-export const SITE: Site = {
-  NAME: "Astro Nano",
-  EMAIL: "markhorn.dev@gmail.com",
-  NUM_POSTS_ON_HOMEPAGE: 3,
-  NUM_WORKS_ON_HOMEPAGE: 2,
-  NUM_PROJECTS_ON_HOMEPAGE: 3,
-};
-```
+### In Clinic
 
-| Field | Req | Description |
-| :---- | :-- | :-----------|
-| NAME | Yes | Displayed in header and footer. Used in SEO and RSS. |
-| EMAIL | Yes | Displayed in contact section. |
-| NUM_POSTS | Yes | Limit num of posts on home page. |
-| NUM_WORKS | Yes | Limit num of works on home page. |
-| NUM_PROJECTS | Yes | Limit num of projects on home page. |
+- Triage ambiguity into structured decision-making
+- Translate symptoms into diagnoses, plans, outcomes
+- Reduce risk, uncertainty, and emotional distress
 
-Customize your page metadata
+### In the Terminal
 
-```ts 
-// src/consts.ts
+- Turn vague requirements into buildable code
+- Reduce user friction with clean, fast interfaces
+- Ship tools that improve signal density (like TMDR)
 
-export const HOME: Metadata = {
-  TITLE: "Home",
-  DESCRIPTION: "Astro Nano is a minimal and lightweight blog and portfolio.",
-};
-```
+### In Strategy
 
-| Field | Req | Description |
-| :---- | :-- | :-----------|
-| TITLE | Yes | Displayed in browser tab. Used in SEO and RSS. |
-| DESCRIPTION | Yes | Used in SEO and RSS. |
+- Shape problems so teams know what to build
+- Bridge clinical nuance with product constraints
+- Design systems that reduce entropy over time, not amplify it
 
-Customize your social media
+## Why It Matters
 
-```ts 
-// src/consts.ts
+Entropy isn’t just physics — it’s in every broken spec, every missed edge case, every bloated clinical system.
 
-export const SOCIALS: Socials = [
-  { 
-    NAME: "twitter-x",
-    HREF: "https://twitter.com/markhorn_dev",
-  },
-  { 
-    NAME: "github",
-    HREF: "https://github.com/markhorn-dev"
-  },
-  { 
-    NAME: "linkedin",
-    HREF: "https://www.linkedin.com/in/markhorn-dev",
-  }
-];
-```
+My work is about **reversing that trend**:
 
-| Field | Req | Description |
-| :---- | :-- | :-----------|
-| NAME | Yes | Displayed in contact section as a link. |
-| HREF | Yes | External url to social media profile. |
+- Fewer steps
+- Clearer logic
+- Safer care
+- Better outcomes
+
+Entropy rises unless someone actively reduces it. That’s the role I play.
+
+---
+
+## Closing
+
+I don’t just want to help. I want to structure.  
+I don’t just want to advise. I want to design.  
+I don’t just want to be involved. I want to **reduce entropy**.

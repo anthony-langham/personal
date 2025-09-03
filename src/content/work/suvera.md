@@ -1,20 +1,21 @@
 ---
 company: "Suvera"
-role: "Director of Clinical Innovation"
+role: "Director of Clinical Operations"
 dateStart: "03/01/2021"
 dateEnd: "05/05/2024"
 ---
 
-Employee #6. Founded the care and operations team in a pre-seed startup that grew to 50+ and supported 250+ GP practices and 100k+ patients.
+Employee #6. Founded and led the Care & Clinical Operations team in a seed stage healthtech startup
 
-Member of the leadership team.
+- Cross functional team grew to >50
+- Supported 250+ GP practices
+- Managed >100k+ patients
+- Member of the leadership team
 
-Built internal EHR workflows and automations that reduced clinician handling time by ~50% and scaled to 250+ practices.
+Built internal EHR workflows and automations that reduced clinician handling time by ~50% and maintained operational excellence and safety
 
-Partnered with engineering to scope risks, write safety requirements, run UAT and ship CQC-compliant releases on a predictable cadence.
+Partnered with engineering and data teams to scope risks, write safety requirements, run UAT and ship CQC-compliant releases on a predictable cadence.
 
-Instrumented service quality (alerts, post deployment checks) which cut incident time to detect by 70%.
-
-Hired and led a cross functional team (50+ across clinical and operations).
+Instrumented service quality (alerts, post deployment checks) which cut incident time to detect by 70%. (SQL / Count / Tableau)
 
 Created playbooks, audits and feedback loops to keep change safe at speed.
