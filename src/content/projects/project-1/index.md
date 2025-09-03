@@ -1,79 +1,74 @@
 ---
 title: "tmdr"
 description: "Too Medical Didn't Read a CLI & TUI for medical acronyms"
-date: "Mar 18 2025"
-demoURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+date: "Aug 18 2025"
+demoURL: "https://www.tmdr.sh"
+repoURL: "https://github.com/anthony-langham/tmdr"
 ---
 
-![Astro Sphere Lighthouse Score](/astro-sphere.jpg)
+Too Medical; Didn’t Read
 
-Astro Sphere is a static, minimalist, lightweight, lightning fast portfolio and blog theme based on my personal website.
+Introducing tmdr : a command line tool with optional TUI that provides clinical acronym context to engineers working in healthtech.
 
-It is primarily Astro, Tailwind and Typescript, with a very small amount of SolidJS for stateful components.
+<img src="/tmdr-demo.gif" alt="TMDR" width="600"/>
 
-## 🚀 Deploy your own
+In healthtech, engineers, analysts, and pm’s encounter a lot of medical acronyms:
 
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_vercel.svg" />
-  </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-sphere">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
+- ABG
+- GCS
+- BNF
 
-## 📋 Features
+So much so we had acronym glossary pages at both suvera and babylon.
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
-- ✅ Searchable content (posts and projects)
+It’s a small problem, but a sticky one. Especially when you’re building, debugging, or trying to make product decisions in a clinical context.
 
-## 💯 Lighthouse score
+## The Insight
 
-![Astro Sphere Lighthouse Score](/lighthouse.png)
+This isn’t really a medical knowledge problem. It’s a **workflow** problem. Clinical acronyms aren’t going away. But the way we look them up? That could be definitely be better especially for people whos primary workflow is based around the terminal.
 
-## 🕊️ Lightweight
+## The Solution
 
-All pages under 100kb (including fonts)
+I built [`tmdr`](https://github.com/anthony-langham/tmdr) — **Too Medical; Didn’t Read**.
 
-## ⚡︎ Fast
+`tmdr` is a terminal native, offline tool for looking up clinical acronyms with zero friction and zero token burn.
 
-Rendered in ~40ms on localhost
+```bash
+$ tmdr abg
+ABG → Arterial Blood Gas
+A test measuring oxygen and carbon dioxide in arterial blood.
+```
 
-## 📄 Configuration
+- No browser.
+- No notion hunt.
+- No LLM.
+- No fluff.
 
-The blog posts on the demo serve as the documentation and configuration.
+Just the definition, where you need it.
 
-## 💻 Commands
+Details:
 
-All commands are run from the root of the project, from a terminal:
+- Written in Go
+- Distributed via curl
+- Styled with BubbleTea + Lip Gloss
+- Fully open source
 
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
+Install it with:
 
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
+```bash
+curl -fsSL https://tmdr.sh/install | bash
+```
 
-## 🏛️ License
+Or visit: [https://tmdr.sh](https://tmdr.sh)
 
-MIT
+## Why It Matters
+
+- For engineers: less distraction, more flow
+- For PMs: clarity in specs and sprint planning
+- For ML teams: consistent terminology without burning tokens
+- For me: a way to turn clinical experience into something useful
+
+## What’s Next
+
+This is a quick experiment to see how clinical context can be made more accessible to people working in the terminal.
+
+If you're building in healthtech, and you’ve felt this friction before let me know your thoughts
