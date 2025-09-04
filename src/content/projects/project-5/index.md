@@ -7,7 +7,11 @@ repoURL: "https://www.github.com/anthony-langham/claudeKit"
 
 ## Overview
 
-ClaudeKit provides a sprint-based workflow for managing complex development tasks with Claude Code. It uses:
+ClaudeKit provides a sprint-based workflow for managing complex development tasks with Claude Code.
+
+![claudeKit image](/kit.png)
+
+It uses:
 
 Plan Mode for thoughtful project planning
 Custom Slash Commands for workflow automation
