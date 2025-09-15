@@ -1,6 +1,6 @@
 ---
 company: "Suvera"
-role: "Director of Clinical Operations"
+role: "Medical Director - Product & Service Delivery"
 dateStart: "03/01/2021"
 dateEnd: "05/05/2024"
 ---
