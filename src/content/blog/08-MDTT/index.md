@@ -11,7 +11,7 @@ In the same way that successful clinical services utilise multi-disciplinary tea
 
 The concept of the Multi-Disciplinary Team Meeting (MDT) has been common place within the NHS for decades.
 
-Once a fortnight or once a month a group of cross-functional specialists meet and discuss clinical cases that require input across multiple disciplines to decide on the best course of action for a particular patient (it’s like an episode of “House” but with more drama 😉).
+Once a fortnight or once a month a group of cross-functional specialists meet and discuss clinical cases that require input across multiple disciplines to decide on the best course of action for a particular patient.
 
 These meetings might be between oncologists and radiologists, or urologists and gynaecologists, or obstetricians and neonataloligists. Either way, they meet, discuss difficult cases that need multiple opinions, make a shared plan, and move forward.
 
@@ -38,5 +38,3 @@ Without generating revenue you can’t afford to pay the bills to keep improving
 At Suvera we understand that each of the 5 key business components should be treated in the same way that specialties within an MDT meeting in the NHS are; with mutual respect and understanding.
 
 The idea of a MDTT Meeting (Multidisciplinary Tech Team Meeting) - Is a nod to the efficiency and collaborative nature of the NHS.
-
-We’re building our Multi-Disciplinary Tech Team (MDTT) right now 🔥🔥🔥 - if you want to be involved - get in touch.
