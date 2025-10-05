@@ -1,6 +1,6 @@
 ---
 title: "NoteParser"
-description: "Portfolio and blog build with astro."
+description: "An explainable parsing tool for AVT outputs."
 date: "June 10 2025"
 demoURL: "https://www.noteparser.uk"
 repoURL: "https://github.com/anthony-langham/noteparser"

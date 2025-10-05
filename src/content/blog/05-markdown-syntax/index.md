@@ -2,6 +2,7 @@
 title: "Healthcare Engineering"
 description: "Intersections in disciplines"
 date: "Mar 17 2024"
+draft: true
 ---
 
 In recent years, the intersection of healthcare and technology has given rise to a robust field known as healthcare engineering. This innovative discipline combines engineering and software development principles to transform the healthcare industry. In particular, software development is pivotal in healthtech, empowering professionals to streamline processes, enhance patient care, and drive improvements to patient care. In this post, we will explore the fascinating world of healthcare engineering, particularly emphasising the transformative impact of software development in HealthTech.

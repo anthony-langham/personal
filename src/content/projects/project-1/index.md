@@ -1,6 +1,6 @@
 ---
 title: "tmdr"
-description: "Too Medical Didn't Read a CLI & TUI for medical acronyms"
+description: "A CLI & TUI for medical acronyms"
 date: "Aug 18 2025"
 demoURL: "https://www.tmdr.sh"
 repoURL: "https://github.com/anthony-langham/tmdr"
