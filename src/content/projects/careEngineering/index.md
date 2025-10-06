@@ -2,7 +2,7 @@
 title: "Care Engineering"
 description: "Ambient Scribe"
 date: "June 18 2025"
-demoURL: "https://www.care.engineering"
+demoURL: "https://care.engineering"
 repoURL: "https://github.com/anthony-langham"
 ---
 
